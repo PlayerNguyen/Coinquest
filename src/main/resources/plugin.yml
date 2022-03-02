@@ -1,0 +1,4 @@
+name: Coinquest
+main: com.github.playernguyen.coinquest.Coinquest
+description: Conquest the coin-system with perfect security, fast, and compact.
+version: @VERSION@
