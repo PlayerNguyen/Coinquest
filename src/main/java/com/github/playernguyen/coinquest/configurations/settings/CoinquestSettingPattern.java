@@ -4,7 +4,13 @@ import com.github.playernguyen.coinquest.configurations.CoinquestConfigurationPa
 
 public enum CoinquestSettingPattern implements CoinquestConfigurationPattern {
 
-    STORAGE_TYPE("STORAGE_TYPE", "json", "The storage type");
+    STORAGE_TYPE("StorageType", "json", "The storage type"),
+
+    JSON_STORAGE_DIRECTORY("JsonStorageDirectory", "storage"),
+
+    DEFAULT_TOKEN_ON_FIRST_JOIN("DefaultTokenOnFirstJoin", 0D)
+
+    ;
 
     private final String node;
     private final Object defaultValue;
