@@ -54,8 +54,6 @@ public interface CoinquestPlayerManagerExtensible {
      *
      * @param player a new player instance which will replace the older player.
      * @throws Exception an exception that cannot modify user in storage or container.
-     * @deprecated this method cost more time complexity by getting and
-     * replacing a hash map value.
      */
     void updatePlayer(CoinquestPlayer player) throws Exception;
 

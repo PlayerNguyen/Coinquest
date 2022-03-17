@@ -64,13 +64,11 @@ public class CoinquestPlayerManagerJson
 
     @Override
     public void updatePlayer(CoinquestPlayer player) throws IOException {
-        // Bukkit.getOfflinePlayer(player.getPlayerUUID()).hasPlayedBefore();
-        // - Check on higher class level
-
         // Update the storage first
         CoinquestStorablePlayerJson playerInJson
                 = new CoinquestStorablePlayerJson(plugin, player.getPlayerUUID());
         playerInJson.update(player);
+
         // Update online container
         // Online means existed inside container
         if (this.container.hasPlayer(player.getPlayerUUID())) {
@@ -80,6 +78,6 @@ public class CoinquestPlayerManagerJson
 
     @Override
     public void updatePlayer(UUID uuid, double balance) throws Exception {
-        this.updatePlayer(new CoinquestPlayerJson(uuid, balance));
+        this.updatePlayer(this.createPlayer(uuid, balance));
     }
 }
